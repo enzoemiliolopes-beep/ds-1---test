@@ -4,19 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <div class="container">
         <h2>Novo cadastro</h2>
         <form action="/salvar" method="post">
 
-            <label for="campo_nome">Nome principal<label>
-                <input type="text" id="campo_nome" name="campo_nome" placeholder="digite seu nome...." required>
+            <label >Nome principal<label>
+                <input type="text"name="campo_nome" required>
 
-                <label for="campo_info">Informações:</label>
-                <input type="text" id="campo_info"  name="campo_info" placeholder="Digite uma informação..." required>
+                <label>Informaçõescomplementares</label>
+                <input type="text" name="campo_info" required>
 
+                    <label for="">valor</label>
+                    <input type="number" name="cam_valor" placeholder="0.00" required>
                 <button type="submit">Salvar</button>
         </form>
         <hr>
